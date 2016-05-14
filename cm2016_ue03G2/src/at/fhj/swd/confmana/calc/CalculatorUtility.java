@@ -1,5 +1,7 @@
 package at.fhj.swd.confmana.calc;
 
+import org.junit.Test;
+
 import at.fhj.swd.confmana.calc.functions.Adder;
 import at.fhj.swd.confmana.calc.functions.Cosine;
 import at.fhj.swd.confmana.calc.functions.Divider;
@@ -65,7 +67,11 @@ public class CalculatorUtility {
 	
 	public static double div(double first, double second){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(divider==null) divider=new Divider();
+		return divider.div(first, second);
+	
+		
+		
 	}
 	
 	public static double pow2(double first){
@@ -90,7 +96,9 @@ public class CalculatorUtility {
 	
 	public static double sin(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (sine == null)
+			sine = new Sine();
+		return sine.sin(first);
 	}
 
 	
@@ -106,7 +114,9 @@ public class CalculatorUtility {
 	
 	public static int numToInt(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (numToInt == null)
+			numToInt = new NumToInt();
+		return numToInt.numToInt(first);
 	}
 	
 	public static double randomize(int lowerBound, int upperBound){
