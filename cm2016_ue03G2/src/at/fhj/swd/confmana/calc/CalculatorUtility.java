@@ -67,8 +67,8 @@ public class CalculatorUtility {
 	public static double div(double first, double second){
 		// insert meaningful code here and adopt dummy return
 		if(divider==null) divider=new Divider();
-		if(second!=0)return divider.div(first, second);
-		else throw new IllegalArgumentException("invalide imput");
+		return divider.div(first, second);
+	
 		
 		
 	}
