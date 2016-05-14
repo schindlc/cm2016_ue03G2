@@ -82,10 +82,19 @@ public class CalculatorUtility {
 		return 0;
 	}
 	
-	public static double rtN(double first, double root){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+	public static double rtN(double first, double root)
+	{	
+		if (first < 1 || root < 0)
+		{
+			throw new IllegalArgumentException("invalid input");
+		}
+		else
+		{
+			RootN calculate = new RootN();
+			return calculate.rtN(first, root);
+		}
 	}
+		
 	
 	public static double sin(double first){
 		// insert meaningful code here and adopt dummy return
