@@ -73,9 +73,10 @@ public class CalculatorUtility  {
 		
 	}
 	/**
-	 * creates operator "power of two" when the number first is called  
+	 * creates calculator "power of two" of doubles  
 	 * @param first is the number 
 	 * @return the power of two of the number the first
+	 * @author siderida
 	 */
 	public static double pow2(double first){
 		// insert meaningful code here and adopt dummy return
