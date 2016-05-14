@@ -59,7 +59,8 @@ public class CalculatorUtility {
 	
 	public static double mul(double first, double second){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(Multiplier==null) multiplier=new Multiplier();
+		return multiplier.mul(first, second);
 	}
 	
 	public static double div(double first, double second){
