@@ -84,7 +84,7 @@ public class CalculatorUtility {
 	
 	public static double rtN(double first, double root)
 	{	
-		if (first < 1 || root < 0)
+		if (first < 0)
 		{
 			throw new IllegalArgumentException("invalid input");
 		}
