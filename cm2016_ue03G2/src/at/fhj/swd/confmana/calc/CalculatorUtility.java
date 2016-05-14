@@ -1,5 +1,7 @@
 package at.fhj.swd.confmana.calc;
 
+import org.junit.Test;
+
 import at.fhj.swd.confmana.calc.functions.Adder;
 import at.fhj.swd.confmana.calc.functions.Cosine;
 import at.fhj.swd.confmana.calc.functions.Divider;
@@ -64,7 +66,11 @@ public class CalculatorUtility {
 	
 	public static double div(double first, double second){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(divider==null) divider=new Divider();
+		return divider.div(first, second);
+	
+		
+		
 	}
 	
 	public static double pow2(double first){
