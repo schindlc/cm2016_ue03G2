@@ -95,7 +95,9 @@ public class CalculatorUtility {
 	
 	public static double sin(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (sine == null)
+			sine = new Sine();
+		return sine.sin(first);
 	}
 
 	
