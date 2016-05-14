@@ -105,7 +105,9 @@ public class CalculatorUtility {
 	
 	public static int numToInt(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (numToInt == null)
+			numToInt = new NumToInt();
+		return numToInt.numToInt(first);
 	}
 	
 	public static double randomize(int lowerBound, int upperBound){
