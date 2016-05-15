@@ -84,15 +84,11 @@ public class CalculatorUtility {
 	
 	public static double rtN(double first, double root)
 	{	
-		if (first < 0)
+		if (rootN == null)
 		{
-			throw new IllegalArgumentException("invalid input");
+			rootN = new RootN();
 		}
-		else
-		{
-			RootN calculate = new RootN();
-			return calculate.rtN(first, root);
-		}
+		return rootN.rtN(first, root);
 	}
 		
 	
