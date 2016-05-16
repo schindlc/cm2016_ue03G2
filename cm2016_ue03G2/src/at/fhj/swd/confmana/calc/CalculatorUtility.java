@@ -89,10 +89,15 @@ public class CalculatorUtility {
 		return 0;
 	}
 	
-	public static double rtN(double first, double root){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+	public static double rtN(double first, double root)
+	{	
+		if (rootN == null)
+		{
+			rootN = new RootN();
+		}
+		return rootN.rtN(first, root);
 	}
+		
 	
 	public static double sin(double first){
 		// insert meaningful code here and adopt dummy return

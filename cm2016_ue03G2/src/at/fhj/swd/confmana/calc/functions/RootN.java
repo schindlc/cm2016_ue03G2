@@ -1,8 +1,16 @@
 package at.fhj.swd.confmana.calc.functions;
 
 public class RootN {
-	public double rtN(double first, double root){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+	public double rtN(double first, double root)
+	{
+		if (first < 0)
+		{
+			throw new IllegalArgumentException("invalid input");
+		}
+		else
+		{
+			double result = Math.pow(first, 1/root);
+			return result;
+		}
 	}
 }
