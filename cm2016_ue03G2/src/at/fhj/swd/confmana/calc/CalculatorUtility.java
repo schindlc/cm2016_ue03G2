@@ -85,8 +85,10 @@ public class CalculatorUtility {
 	}
 	
 	public static double powN(double first, double power){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(powerOfN == null){
+			powerOfN = new PowerOfN();
+		}
+		return powerOfN.powN(first, power);
 	}
 	
 	public static double rtN(double first, double root)
