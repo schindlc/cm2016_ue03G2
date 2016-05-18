@@ -14,7 +14,12 @@ public class IntRotatorRight {
 		StringBuffer sb = new StringBuffer().append(Math.abs(number));
 		
 		char lastChar = sb.charAt(sb.length()-1);
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		
+		sb.insert(0, lastChar);
+		sb.deleteCharAt(4);
+		
+		number = Integer.parseInt(sb.toString());
+		if(negative == true) number *= -1;
+		return number;
 	}
 }
