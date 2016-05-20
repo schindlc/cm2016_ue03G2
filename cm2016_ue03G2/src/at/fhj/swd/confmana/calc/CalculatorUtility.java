@@ -18,7 +18,7 @@ import at.fhj.swd.confmana.calc.functions.Sine;
 import at.fhj.swd.confmana.calc.functions.SquareRoot;
 import at.fhj.swd.confmana.calc.functions.Subtractor;
 
-public class CalculatorUtility {
+public class CalculatorUtility  {
 
 	/**
 	 * Functions of calculator
@@ -73,10 +73,19 @@ public class CalculatorUtility {
 		
 		
 	}
-	
+	/**
+	 * creates calculator "power of two" of doubles  
+	 * @param first is the number 
+	 * @return the power of two of the number the first
+	 * @author siderida
+	 */
 	public static double pow2(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (powerOfTwo == null)
+			powerOfTwo = new PowerOfTwo();
+		return powerOfTwo.pow2(first);
+	
+		
 	}
 	
 	// 
