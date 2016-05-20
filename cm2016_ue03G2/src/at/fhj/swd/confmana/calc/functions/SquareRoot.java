@@ -1,8 +1,12 @@
 package at.fhj.swd.confmana.calc.functions;
 
 public class SquareRoot {
-	public double sqrt(double first){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+	
+	// Calculates the square root from a double value
+	public double sqrt(double value){
+		if(value < 0)
+			throw new IllegalArgumentException();
+
+		return Math.sqrt(value);
 	}
 }

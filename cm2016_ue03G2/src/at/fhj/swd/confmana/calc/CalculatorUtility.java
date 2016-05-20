@@ -79,9 +79,13 @@ public class CalculatorUtility {
 		return 0;
 	}
 	
+	// 
 	public static double sqrt(double first){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		
+		if(squareRoot == null)
+			squareRoot = new SquareRoot();
+				
+		return squareRoot.sqrt(first);
 	}
 	
 	public static double powN(double first, double power){
