@@ -17,9 +17,9 @@ public class Randomizer {
 			lowerBound = upperBound;
 			upperBound = temp;
 		} 
-		
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		lastRandomNumber = Math.random();
+		double sN = (upperBound - lowerBound) * lastRandomNumber;
+		return lowerBound + sN;
 	}
 
 	public double getLastRandomNumber() {
