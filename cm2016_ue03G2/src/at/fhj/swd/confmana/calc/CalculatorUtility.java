@@ -109,13 +109,17 @@ public class CalculatorUtility {
 	}
 	
 	public static double randomize(int lowerBound, int upperBound){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(randomizer == null){
+			randomizer = new Randomizer();
+		}
+		return randomizer.rand(lowerBound, upperBound);
 	}
 	
 	public static double getLastRandomNumber(){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(randomizer == null){
+			randomizer = new Randomizer();
+		}
+		return randomizer.getLastRandomNumber();
 	}
 	
 	public static int intRotateLeft(int number){
