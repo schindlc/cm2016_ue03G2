@@ -16,7 +16,7 @@ public class IntRotatorRight {
 		char lastChar = sb.charAt(sb.length()-1);
 		
 		sb.insert(0, lastChar);
-		sb.deleteCharAt(4);
+		sb.deleteCharAt(sb.length()-1);
 		
 		number = Integer.parseInt(sb.toString());
 		if(negative == true) number *= -1;
