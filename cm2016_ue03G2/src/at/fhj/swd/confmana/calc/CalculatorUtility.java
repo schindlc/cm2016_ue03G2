@@ -159,8 +159,10 @@ public class CalculatorUtility  {
 	}
 	
 	public static int intRotateRight(int number){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(intRotatorRight == null){
+			intRotatorRight = new IntRotatorRight();
+		}
+		return intRotatorRight.intRotateRight(number);
 	}
 	
 }
