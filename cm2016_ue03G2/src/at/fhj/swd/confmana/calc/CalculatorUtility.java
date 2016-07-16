@@ -1,5 +1,7 @@
 package at.fhj.swd.confmana.calc;
 
+import org.junit.Test;
+
 import at.fhj.swd.confmana.calc.functions.Adder;
 import at.fhj.swd.confmana.calc.functions.Cosine;
 import at.fhj.swd.confmana.calc.functions.Divider;
@@ -16,7 +18,7 @@ import at.fhj.swd.confmana.calc.functions.Sine;
 import at.fhj.swd.confmana.calc.functions.SquareRoot;
 import at.fhj.swd.confmana.calc.functions.Subtractor;
 
-public class CalculatorUtility {
+public class CalculatorUtility  {
 
 	/**
 	 * Functions of calculator
@@ -59,37 +61,64 @@ public class CalculatorUtility {
 	
 	public static double mul(double first, double second){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(multiplier==null) multiplier=new Multiplier();
+		return multiplier.mul(first, second);
 	}
 	
 	public static double div(double first, double second){
 		// insert meaningful code here and adopt dummy return
-		return 0;
-	}
+		if(divider==null) divider=new Divider();
+		return divider.div(first, second);
 	
+		
+		
+	}
+	/**
+	 * creates calculator "power of two" of doubles  
+	 * @param first is the number 
+	 * @return the power of two of the number the first
+	 * @author siderida
+	 */
 	public static double pow2(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (powerOfTwo == null)
+			powerOfTwo = new PowerOfTwo();
+		return powerOfTwo.pow2(first);
+	
+		
 	}
 	
+	// 
 	public static double sqrt(double first){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		
+		if(squareRoot == null)
+			squareRoot = new SquareRoot();
+				
+		return squareRoot.sqrt(first);
 	}
 	
 	public static double powN(double first, double power){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(powerOfN == null){
+			powerOfN = new PowerOfN();
+		}
+		return powerOfN.powN(first, power);
 	}
 	
-	public static double rtN(double first, double root){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+	public static double rtN(double first, double root)
+	{	
+		if (rootN == null)
+		{
+			rootN = new RootN();
+		}
+		return rootN.rtN(first, root);
 	}
+		
 	
 	public static double sin(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (sine == null)
+			sine = new Sine();
+		return sine.sin(first);
 	}
 
 	
@@ -105,17 +134,23 @@ public class CalculatorUtility {
 	
 	public static int numToInt(double first){
 		// insert meaningful code here and adopt dummy return
-		return 0;
+		if (numToInt == null)
+			numToInt = new NumToInt();
+		return numToInt.numToInt(first);
 	}
 	
 	public static double randomize(int lowerBound, int upperBound){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(randomizer == null){
+			randomizer = new Randomizer();
+		}
+		return randomizer.rand(lowerBound, upperBound);
 	}
 	
 	public static double getLastRandomNumber(){
-		// insert meaningful code here and adopt dummy return
-		return 0;
+		if(randomizer == null){
+			randomizer = new Randomizer();
+		}
+		return randomizer.getLastRandomNumber();
 	}
 	
 	public static int intRotateLeft(int number){
